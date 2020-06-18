@@ -1,0 +1,16 @@
+<label> Puppy Name: </label>
+<%= @puppy.name %> <br>
+<label> Puppy Breed: </label>
+<%= @puppy.breed %> <br>
+
+<a class = "button" href="/puppies/<%= @puppy.id%>/edit">Edit</a>
+<a class = "button" href="/puppies">Back</a>
+
+
+<form action = "/puppies/<%= @puppy.id %>" method = "post">
+<input type="hidden" name="_method" value="delete">
+
+<input type = "submit" value = "Delete Puppy">
+</form>
+
+
